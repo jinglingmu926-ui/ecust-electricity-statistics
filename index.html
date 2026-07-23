@@ -402,7 +402,9 @@
 
       const weekData = records
         .filter(item =>
-          item.date >= weekStart && item.date < weekEnd
+          item.rawTime.includes(" ") &&
+          item.date >= weekStart &&
+          item.date < weekEnd
         )
         .map(item => {
           const index = weekdayIndex(item.date);
