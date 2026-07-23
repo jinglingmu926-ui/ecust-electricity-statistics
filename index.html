@@ -17,7 +17,7 @@
     }
 
     main {
-      max-width: 1100px;
+      max-width: 1180px;
       margin: auto;
     }
 
@@ -37,6 +37,7 @@
     .subtitle, .note {
       color: #64748b;
       font-size: 14px;
+      line-height: 1.7;
     }
 
     .status {
@@ -63,7 +64,7 @@
 
     .cards {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 14px;
       margin-bottom: 18px;
     }
@@ -84,8 +85,17 @@
     }
 
     .card-value {
-      font-size: 25px;
+      display: block;
+      font-size: 24px;
       font-weight: 750;
+      word-break: break-word;
+    }
+
+    .card-hint {
+      display: block;
+      margin-top: 7px;
+      color: #94a3b8;
+      font-size: 12px;
     }
 
     .green { color: #15803d; }
@@ -101,8 +111,78 @@
       font-size: 19px;
     }
 
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: end;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    button {
+      appearance: none;
+      padding: 9px 14px;
+      border: 1px solid #cbd5e1;
+      border-radius: 9px;
+      background: white;
+      color: #334155;
+      font: inherit;
+      cursor: pointer;
+    }
+
+    button:hover {
+      border-color: #64748b;
+    }
+
+    button.active {
+      border-color: #2563eb;
+      background: #2563eb;
+      color: white;
+    }
+
+    .date-field {
+      display: none;
+      gap: 6px;
+      flex-direction: column;
+      color: #64748b;
+      font-size: 12px;
+    }
+
+    .date-field.visible {
+      display: flex;
+    }
+
+    input[type="date"] {
+      min-height: 39px;
+      padding: 7px 9px;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      background: white;
+      color: #172033;
+      font: inherit;
+    }
+
+    .range-summary {
+      margin-top: 14px;
+      padding: 11px 13px;
+      border-radius: 9px;
+      background: #f8fafc;
+      color: #475569;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .error {
+      color: #b91c1c;
+    }
+
     .chart {
-      height: 360px;
+      height: 380px;
+      margin-top: 8px;
+    }
+
+    .daily-chart {
+      height: 320px;
     }
 
     .weekday-legend {
@@ -125,6 +205,13 @@
       border-radius: 50%;
     }
 
+    .legend-line {
+      width: 25px;
+      height: 0;
+      border-top: 3px dashed white;
+      filter: drop-shadow(0 0 1px #64748b);
+    }
+
     table {
       width: 100%;
       border-collapse: collapse;
@@ -135,6 +222,7 @@
       padding: 11px 10px;
       border-bottom: 1px solid #e9edf3;
       text-align: left;
+      white-space: nowrap;
     }
 
     th {
@@ -146,7 +234,13 @@
       font-size: 14px;
     }
 
-    @media (max-width: 780px) {
+    .empty {
+      padding: 48px 16px;
+      color: #94a3b8;
+      text-align: center;
+    }
+
+    @media (max-width: 860px) {
       body { padding: 14px; }
 
       header {
@@ -163,7 +257,7 @@
       }
 
       .chart {
-        height: 310px;
+        height: 330px;
       }
 
       .table-wrap {
@@ -171,9 +265,22 @@
       }
     }
 
-    @media (max-width: 480px) {
+    @media (max-width: 520px) {
       .cards {
         grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 23px;
+      }
+
+      .toolbar {
+        align-items: stretch;
+      }
+
+      .toolbar button,
+      .date-field {
+        flex: 1 1 auto;
       }
     }
   </style>
@@ -184,9 +291,7 @@
     <header>
       <div>
         <h1>华理徐汇四舍 215 电量看板</h1>
-        <div class="subtitle">
-          每天 09:12—21:12，每 3 小时自动查询
-        </div>
+        <div class="subtitle">每天 09:12—21:12，每 3 小时自动查询</div>
       </div>
       <div id="status" class="status">读取中</div>
     </header>
@@ -198,25 +303,63 @@
       </div>
 
       <div class="card">
-        <span class="card-label">较上次查询用电</span>
+        <span class="card-label">较上次查询变化</span>
         <strong id="last-usage" class="card-value">--</strong>
       </div>
 
       <div class="card">
         <span class="card-label">今天累计用电</span>
         <strong id="today-usage" class="card-value">--</strong>
+        <span class="card-hint">包含昨晚最后一次至今天首次查询之间的变化</span>
       </div>
 
       <div class="card">
         <span class="card-label">最近查询时间</span>
         <strong id="updated" class="card-value">--</strong>
       </div>
+
+      <div class="card">
+        <span class="card-label">近7日平均每日用电</span>
+        <strong id="average-usage" class="card-value">--</strong>
+      </div>
+
+      <div class="card">
+        <span class="card-label">预计可用天数</span>
+        <strong id="estimated-days" class="card-value">--</strong>
+        <span class="card-hint">至少积累3天数据后估算，仅供参考</span>
+      </div>
     </section>
 
     <section class="panel">
-      <h2>本周各时段剩余电量</h2>
+      <h2>选择查看范围</h2>
+      <div class="note">旧数据不会删除。平时看最近7天，需要追溯时可查看30天或选择任意日期。</div>
+
+      <div class="toolbar">
+        <button id="range-7" class="active" type="button">最近7天</button>
+        <button id="range-30" type="button">最近30天</button>
+        <button id="range-custom" type="button">自定义日期</button>
+
+        <label id="start-field" class="date-field">
+          开始日期
+          <input id="start-date" type="date">
+        </label>
+
+        <label id="end-field" class="date-field">
+          结束日期
+          <input id="end-date" type="date">
+        </label>
+
+        <button id="apply-custom" type="button" hidden>查询</button>
+      </div>
+
+      <div id="range-summary" class="range-summary">准备数据中……</div>
+    </section>
+
+    <section class="panel">
+      <h2>剩余电量连续趋势</h2>
       <div class="note">
-        横轴为一天中的时间。不同颜色代表星期，可直接比较每天相同时段的电量变化。
+        同一天内按星期着色；相邻两天之间用带灰色描边的白色虚线连接。
+        鼠标悬停可查看准确时间和较上次变化。
       </div>
 
       <div class="weekday-legend">
@@ -227,20 +370,31 @@
         <span class="legend-item"><i class="legend-dot" style="background:#00acc1"></i>周五</span>
         <span class="legend-item"><i class="legend-dot" style="background:#1e88e5"></i>周六</span>
         <span class="legend-item"><i class="legend-dot" style="background:#8e24aa"></i>周日</span>
+        <span class="legend-item"><i class="legend-line"></i>跨天连接</span>
       </div>
 
-      <div id="week-chart" class="chart"></div>
+      <div id="trend-chart" class="chart"></div>
     </section>
 
     <section class="panel">
-      <h2>最近查询记录</h2>
+      <h2>每日用电量</h2>
+      <div class="note">
+        每根柱子代表一天的累计用电。若检测到充值，只累计正常下降区间，并在提示中单独显示充值量。
+      </div>
+      <div id="daily-chart" class="chart daily-chart"></div>
+    </section>
+
+    <section class="panel">
+      <h2>所选日期的查询明细</h2>
+      <div class="note">最多显示所选范围内最近100条记录。</div>
+
       <div class="table-wrap">
         <table>
           <thead>
             <tr>
               <th>查询时间</th>
               <th>剩余电量</th>
-              <th>较上次用电</th>
+              <th>较上次变化</th>
               <th>状态</th>
             </tr>
           </thead>
@@ -268,6 +422,9 @@
       "#8e24aa"
     ];
 
+    let trendChart = null;
+    let dailyChart = null;
+
     function parseTime(value) {
       const normalized = value.includes(" ")
         ? value.replace(" ", "T") + ":00"
@@ -277,7 +434,7 @@
     }
 
     function round(value) {
-      return Math.round(value * 100) / 100;
+      return Math.round((value + Number.EPSILON) * 100) / 100;
     }
 
     function dateKey(date) {
@@ -291,19 +448,41 @@
       return (date.getDay() + 6) % 7;
     }
 
-    function startOfWeek(date) {
+    function addDays(date, days) {
       const result = new Date(date);
-      result.setHours(0, 0, 0, 0);
-      result.setDate(result.getDate() - weekdayIndex(result));
+      result.setDate(result.getDate() + days);
       return result;
     }
 
+    function dayStart(value) {
+      const result = new Date(value);
+      result.setHours(0, 0, 0, 0);
+      return result;
+    }
+
+    function formatDateTime(date) {
+      return new Intl.DateTimeFormat("zh-CN", {
+        month: "2-digit",
+        day: "2-digit",
+        hour: "2-digit",
+        minute: "2-digit",
+        hour12: false
+      }).format(date);
+    }
+
     const records = (Array.isArray(data) ? data : [])
-      .map(item => ({
-        rawTime: item.time,
-        date: parseTime(item.time),
-        remaining: Number(item.kWh)
-      }))
+      .map(item => {
+        const date = parseTime(String(item.time));
+
+        return {
+          rawTime: String(item.time),
+          date,
+          timestamp: date.getTime(),
+          dateKey: dateKey(date),
+          remaining: Number(item.kWh),
+          approximateTime: !String(item.time).includes(" ")
+        };
+      })
       .filter(item =>
         !Number.isNaN(item.date.getTime()) &&
         Number.isFinite(item.remaining)
@@ -313,74 +492,105 @@
     records.forEach((item, index) => {
       if (index === 0) {
         item.usage = null;
+        item.recharge = 0;
+        return;
+      }
+
+      const difference = round(
+        records[index - 1].remaining - item.remaining
+      );
+
+      if (difference >= 0) {
+        item.usage = difference;
+        item.recharge = 0;
       } else {
-        item.usage = round(
-          records[index - 1].remaining - item.remaining
-        );
+        item.usage = 0;
+        item.recharge = round(-difference);
       }
     });
 
-    if (records.length === 0) {
-      document.getElementById("status").textContent = "暂无数据";
-      document.getElementById("status").className =
-        "status status-warning";
+    function buildDailySummaries(sourceRecords) {
+      const map = new Map();
 
-      document.getElementById("week-chart").innerHTML =
-        "<p class='note'>自动任务成功记录数据后，图表会显示在这里。</p>";
-    } else {
-      const latest = records[records.length - 1];
-
-      document.getElementById("remaining").textContent =
-        `${latest.remaining} 度`;
-
-      document.getElementById("updated").textContent =
-        latest.rawTime;
-
-      if (latest.usage === null) {
-        document.getElementById("last-usage").textContent =
-          "等待下次查询";
-      } else if (latest.usage < 0) {
-        document.getElementById("last-usage").textContent =
-          "疑似充值";
-        document.getElementById("last-usage").classList.add("orange");
-      } else {
-        document.getElementById("last-usage").textContent =
-          `${latest.usage} 度`;
-      }
-
-      const latestDateKey = dateKey(latest.date);
-      const todayRecords = records.filter(
-        item => dateKey(item.date) === latestDateKey
-      );
-
-      let todayUsage = 0;
-      let rechargeToday = false;
-
-      for (let index = 1; index < todayRecords.length; index++) {
-        const difference = round(
-          todayRecords[index - 1].remaining -
-          todayRecords[index].remaining
-        );
-
-        if (difference >= 0) {
-          todayUsage += difference;
-        } else {
-          rechargeToday = true;
+      sourceRecords.forEach(item => {
+        if (!map.has(item.dateKey)) {
+          map.set(item.dateKey, {
+            dateKey: item.dateKey,
+            date: dayStart(item.date),
+            weekdayIndex: weekdayIndex(item.date),
+            usage: 0,
+            recharge: 0,
+            count: 0,
+            firstRemaining: item.remaining,
+            lastRemaining: item.remaining
+          });
         }
+
+        const summary = map.get(item.dateKey);
+        summary.count += 1;
+        summary.lastRemaining = item.remaining;
+
+        if (item.usage !== null) {
+          summary.usage = round(summary.usage + item.usage);
+          summary.recharge = round(summary.recharge + item.recharge);
+        }
+      });
+
+      return Array.from(map.values()).sort((a, b) => a.date - b.date);
+    }
+
+    const allDailySummaries = buildDailySummaries(records);
+
+    function updateTopCards() {
+      if (records.length === 0) {
+        document.getElementById("status").textContent = "暂无数据";
+        document.getElementById("status").className = "status status-warning";
+        return;
       }
 
-      document.getElementById("today-usage").textContent =
-        todayRecords.length < 2
-          ? "等待更多数据"
-          : `${round(todayUsage)} 度`;
-
-      if (rechargeToday) {
-        document.getElementById("today-usage").title =
-          "今天检测到疑似充值，累计值仅包含正常下降区间";
-      }
-
+      const latest = records[records.length - 1];
       const statusElement = document.getElementById("status");
       const remainingElement = document.getElementById("remaining");
+      const lastUsageElement = document.getElementById("last-usage");
+
+      remainingElement.textContent = `${latest.remaining} 度`;
+      document.getElementById("updated").textContent = latest.rawTime;
+
+      if (latest.usage === null) {
+        lastUsageElement.textContent = "等待下次查询";
+      } else if (latest.recharge > 0) {
+        lastUsageElement.textContent = `疑似充值 +${latest.recharge} 度`;
+        lastUsageElement.classList.add("orange");
+      } else {
+        lastUsageElement.textContent = `${latest.usage} 度`;
+      }
+
+      const today = allDailySummaries.find(
+        item => item.dateKey === latest.dateKey
+      );
+
+      document.getElementById("today-usage").textContent =
+        today ? `${today.usage} 度` : "等待更多数据";
+
+      const lastSevenDays = allDailySummaries.slice(-7);
+      const usableDays = lastSevenDays.filter(item => item.usage > 0);
+
+      if (usableDays.length === 0) {
+        document.getElementById("average-usage").textContent = "等待更多数据";
+      } else {
+        const average = round(
+          usableDays.reduce((sum, item) => sum + item.usage, 0) /
+          usableDays.length
+        );
+
+        document.getElementById("average-usage").textContent =
+          `${average} 度`;
+
+        document.getElementById("estimated-days").textContent =
+          usableDays.length >= 3 && average > 0
+            ? `约 ${round(latest.remaining / average)} 天`
+            : "等待更多数据";
+      }
 
       if (latest.remaining < 10) {
         statusElement.textContent = "电量告急";
@@ -395,40 +605,145 @@
         statusElement.className = "status status-good";
         remainingElement.classList.add("green");
       }
+    }
 
-      const weekStart = startOfWeek(latest.date);
-      const weekEnd = new Date(weekStart);
-      weekEnd.setDate(weekEnd.getDate() + 7);
+    function setActiveButton(activeId) {
+      ["range-7", "range-30", "range-custom"].forEach(id => {
+        document.getElementById(id).classList.toggle("active", id === activeId);
+      });
+    }
 
-      const weekData = records
-        .filter(item =>
-          item.rawTime.includes(" ") &&
-          item.date >= weekStart &&
-          item.date < weekEnd
-        )
-        .map(item => {
-          const index = weekdayIndex(item.date);
+    function setCustomControlsVisible(visible) {
+      document.getElementById("start-field").classList.toggle("visible", visible);
+      document.getElementById("end-field").classList.toggle("visible", visible);
+      document.getElementById("apply-custom").hidden = !visible;
+    }
 
-          return {
-            weekday: weekdayNames[index],
-            clock: item.rawTime.includes(" ")
-              ? item.rawTime.split(" ")[1]
-              : "00:00",
-            remaining: item.remaining,
-            fullTime: item.rawTime
-          };
+    function getRangeRecords(startDate, endDate) {
+      const start = dayStart(startDate);
+      const end = dayStart(endDate);
+      end.setHours(23, 59, 59, 999);
+
+      return records.filter(item =>
+        item.date >= start && item.date <= end
+      );
+    }
+
+    function buildConnections(groups) {
+      const connections = [];
+
+      for (let index = 1; index < groups.length; index++) {
+        const previous = groups[index - 1].items;
+        const current = groups[index].items;
+
+        connections.push({
+          previous: previous[previous.length - 1],
+          current: current[0]
+        });
+      }
+
+      return connections;
+    }
+
+    function renderTrendChart(selectedRecords) {
+      if (trendChart) {
+        trendChart.destroy();
+        trendChart = null;
+      }
+
+      const container = document.getElementById("trend-chart");
+      container.innerHTML = "";
+
+      if (selectedRecords.length === 0) {
+        container.innerHTML = '<div class="empty">该日期范围内没有查询记录</div>';
+        return;
+      }
+
+      const groupMap = new Map();
+
+      selectedRecords.forEach(item => {
+        if (!groupMap.has(item.dateKey)) {
+          groupMap.set(item.dateKey, {
+            dateKey: item.dateKey,
+            weekdayIndex: weekdayIndex(item.date),
+            items: []
+          });
+        }
+
+        groupMap.get(item.dateKey).items.push(item);
+      });
+
+      const groups = Array.from(groupMap.values());
+      const daySeriesOrder = groups.map(group => group.dateKey);
+      const dayColors = groups.map(
+        group => weekdayColors[group.weekdayIndex]
+      );
+
+      const chartData = selectedRecords.map(item => ({
+        timestamp: item.timestamp,
+        remaining: item.remaining,
+        daySeries: item.dateKey,
+        weekday: weekdayNames[weekdayIndex(item.date)],
+        displayTime: item.approximateTime
+          ? `${item.rawTime}（旧记录，无具体时刻）`
+          : item.rawTime,
+        change: item.usage === null
+          ? "首次记录"
+          : item.recharge > 0
+            ? `疑似充值 +${item.recharge} 度`
+            : `用电 ${item.usage} 度`
+      }));
+
+      const annotations = [];
+
+      buildConnections(groups).forEach(connection => {
+        const start = [
+          connection.previous.timestamp,
+          connection.previous.remaining
+        ];
+        const end = [
+          connection.current.timestamp,
+          connection.current.remaining
+        ];
+
+        annotations.push({
+          type: "line",
+          start,
+          end,
+          style: {
+            stroke: "#64748b",
+            lineWidth: 6,
+            opacity: 0.42
+          }
         });
 
-      const weekChart = new G2Plot.Line("week-chart", {
-        data: weekData,
-        xField: "clock",
+        annotations.push({
+          type: "line",
+          start,
+          end,
+          style: {
+            stroke: "#ffffff",
+            lineWidth: 3,
+            lineDash: [7, 5]
+          }
+        });
+      });
+
+      trendChart = new G2Plot.Line("trend-chart", {
+        data: chartData,
+        xField: "timestamp",
         yField: "remaining",
-        seriesField: "weekday",
-        height: 360,
-        color: weekdayColors,
+        seriesField: "daySeries",
+        height: 380,
+        color: dayColors,
+        annotations,
         meta: {
-          weekday: {
-            values: weekdayNames
+          timestamp: {
+            type: "time",
+            mask: "MM-DD HH:mm"
+          },
+          daySeries: {
+            values: daySeriesOrder
           }
         },
         point: {
@@ -439,7 +754,11 @@
         legend: false,
         xAxis: {
           title: {
-            text: "查询时间"
+            text: "查询日期与时间"
+          },
+          label: {
+            autoHide: true,
+            autoRotate: false
           }
         },
         yAxis: {
@@ -449,39 +768,216 @@
         },
         tooltip: {
           formatter: item => ({
-            name: item.weekday,
+            name: `${item.displayTime} · ${item.weekday} · ${item.change}`,
             value: `${item.remaining} 度`
           })
         }
       });
 
-      weekChart.render();
+      trendChart.render();
+    }
 
-      const recent = records.slice(-12).reverse();
+    function renderDailyChart(selectedRecords) {
+      if (dailyChart) {
+        dailyChart.destroy();
+        dailyChart = null;
+      }
+
+      const container = document.getElementById("daily-chart");
+      container.innerHTML = "";
+
+      const dailyData = buildDailySummaries(selectedRecords);
+
+      if (dailyData.length === 0) {
+        container.innerHTML = '<div class="empty">该日期范围内没有每日统计</div>';
+        return;
+      }
+
+      dailyChart = new G2Plot.Column("daily-chart", {
+        data: dailyData,
+        xField: "dateKey",
+        yField: "usage",
+        height: 320,
+        color: item => weekdayColors[item.weekdayIndex],
+        columnWidthRatio: 0.55,
+        legend: false,
+        xAxis: {
+          title: {
+            text: "日期"
+          },
+          label: {
+            autoHide: true,
+            autoRotate: false
+          }
+        },
+        yAxis: {
+          title: {
+            text: "用电量（度）"
+          },
+          min: 0
+        },
+        label: {
+          position: "top",
+          formatter: item => `${item.usage}`
+        },
+        tooltip: {
+          formatter: item => ({
+            name:
+              `${item.dateKey} ${weekdayNames[item.weekdayIndex]}` +
+              ` · 充值 ${item.recharge} 度` +
+              ` · 日末剩余 ${item.lastRemaining} 度`,
+            value: `用电 ${item.usage} 度`
+          })
+        }
+      });
+
+      dailyChart.render();
+    }
+
+    function renderTable(selectedRecords) {
       const body = document.getElementById("records-body");
+      const recent = selectedRecords.slice(-100).reverse();
+
+      if (recent.length === 0) {
+        body.innerHTML = `
+          <tr>
+            <td colspan="4" class="empty">该日期范围内没有查询记录</td>
+          </tr>
+        `;
+        return;
+      }
 
       body.innerHTML = recent.map(item => {
-        let usageText = "--";
+        let changeText = "--";
         let stateText = "首次记录";
 
-        if (item.usage !== null && item.usage < 0) {
-          usageText = "--";
+        if (item.usage !== null && item.recharge > 0) {
+          changeText = `+${item.recharge} 度`;
           stateText = "疑似充值";
         } else if (item.usage !== null) {
-          usageText = `${item.usage} 度`;
-          stateText = "正常";
+          changeText = `${item.usage} 度`;
+          stateText = "正常用电";
         }
+
+        const displayTime = item.approximateTime
+          ? `${item.rawTime}（时间不详）`
+          : item.rawTime;
 
         return `
           <tr>
-            <td>${item.rawTime}</td>
+            <td>${displayTime}</td>
             <td>${item.remaining} 度</td>
-            <td>${usageText}</td>
+            <td>${changeText}</td>
             <td>${stateText}</td>
           </tr>
         `;
       }).join("");
     }
+
+    function renderRange(startDate, endDate) {
+      const summary = document.getElementById("range-summary");
+
+      if (dayStart(startDate) > dayStart(endDate)) {
+        summary.textContent = "开始日期不能晚于结束日期。";
+        summary.classList.add("error");
+        return;
+      }
+
+      summary.classList.remove("error");
+
+      const selectedRecords = getRangeRecords(startDate, endDate);
+      const daily = buildDailySummaries(selectedRecords);
+      const totalUsage = round(
+        daily.reduce((sum, item) => sum + item.usage, 0)
+      );
+      const average = daily.length
+        ? round(totalUsage / daily.length)
+        : 0;
+      const maxDay = daily.length
+        ? daily.reduce((maximum, item) =>
+            item.usage > maximum.usage ? item : maximum
+          )
+        : null;
+
+      summary.textContent = daily.length
+        ? `${dateKey(startDate)} 至 ${dateKey(endDate)}：` +
+          `共 ${daily.length} 个有记录的日期，累计用电 ${totalUsage} 度，` +
+          `日均 ${average} 度，` +
+          `用电最多为 ${maxDay.dateKey}（${maxDay.usage} 度）。`
+        : `${dateKey(startDate)} 至 ${dateKey(endDate)}：没有记录。`;
+
+      renderTrendChart(selectedRecords);
+      renderDailyChart(selectedRecords);
+      renderTable(selectedRecords);
+    }
+
+    function showRecentDays(days, buttonId) {
+      setActiveButton(buttonId);
+      setCustomControlsVisible(false);
+
+      const latest = records[records.length - 1].date;
+      const end = dayStart(latest);
+      const start = addDays(end, -(days - 1));
+
+      renderRange(start, end);
+    }
+
+    function initialize() {
+      updateTopCards();
+
+      if (records.length === 0) {
+        document.getElementById("range-summary").textContent = "暂无可用数据";
+        document.getElementById("trend-chart").innerHTML =
+          '<div class="empty">自动任务记录数据后，图表会显示在这里</div>';
+        document.getElementById("daily-chart").innerHTML =
+          '<div class="empty">自动任务记录数据后，图表会显示在这里</div>';
+        renderTable([]);
+        return;
+      }
+
+      const earliestKey = records[0].dateKey;
+      const latestKey = records[records.length - 1].dateKey;
+      const startInput = document.getElementById("start-date");
+      const endInput = document.getElementById("end-date");
+
+      startInput.min = earliestKey;
+      startInput.max = latestKey;
+      endInput.min = earliestKey;
+      endInput.max = latestKey;
+      startInput.value = earliestKey;
+      endInput.value = latestKey;
+
+      document.getElementById("range-7").addEventListener("click", () => {
+        showRecentDays(7, "range-7");
+      });
+
+      document.getElementById("range-30").addEventListener("click", () => {
+        showRecentDays(30, "range-30");
+      });
+
+      document.getElementById("range-custom").addEventListener("click", () => {
+        setActiveButton("range-custom");
+        setCustomControlsVisible(true);
+      });
+
+      document.getElementById("apply-custom").addEventListener("click", () => {
+        if (!startInput.value || !endInput.value) {
+          const summary = document.getElementById("range-summary");
+          summary.textContent = "请选择开始日期和结束日期。";
+          summary.classList.add("error");
+          return;
+        }
+
+        renderRange(
+          parseTime(startInput.value),
+          parseTime(endInput.value)
+        );
+      });
+
+      showRecentDays(7, "range-7");
+    }
+
+    initialize();
   </script>
 </body>
 </html>
