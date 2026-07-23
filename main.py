@@ -47,7 +47,8 @@ def once(func: Callable[..., Any]) -> Callable[..., Any]:
 
 @once
 def get_date() -> str:
-    return datetime.datetime.now().strftime("%Y-%m-%d")
+    china_tz = datetime.timezone(datetime.timedelta(hours=8))
+    return datetime.datetime.now(china_tz).strftime("%Y-%m-%d %H:%M")
 
 
 # 你理的 buildid 真是太棒了
