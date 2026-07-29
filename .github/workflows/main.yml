@@ -1,23 +1,31 @@
 name: AutoRecord
+
 on:
   workflow_dispatch:
   schedule:
-  - cron: "12 0,3,6,9,12,15,18,21 * * *"
-    timezone: "Asia/Shanghai"
+    - cron: "12 9 * * *"
+      timezone: "Asia/Shanghai"
+    - cron: "50 23 * * *"
+      timezone: "Asia/Shanghai"
+
 permissions:
   contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+
       - name: Setup
         uses: actions/setup-python@v4
         with:
           python-version: "3.12"
+
       - name: Install
         run: pip install -r requirements.txt
+
       - name: Run
         env:
           URL: ${{ secrets.URL }}
@@ -25,14 +33,15 @@ jobs:
           GITHUB_TRIGGERING_ACTOR: ${{ github.triggering_actor }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_USER_IDS: ${{ secrets.TELEGRAM_USER_IDS }}
-        run: |
-          python main.py
+        run: python main.py
+
       - name: git config
-        run: |-
+        run: |
           git config --global user.name "Github Actions"
           git config --global user.email "actions@gmail.com"
+
       - name: Push
-        run: |-
+        run: |
           git diff
           git add -A
           git status
