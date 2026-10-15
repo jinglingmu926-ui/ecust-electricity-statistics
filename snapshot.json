@@ -1,0 +1,1984 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-15T12:06:02.555Z",
+  "service": {
+    "lastSuccessfulCollectionAt": "2026-10-15T12:05:29.320Z",
+    "lastAttemptAt": null,
+    "lastAttemptStatus": null,
+    "lastPublishedAt": null,
+    "lastPublishError": null
+  },
+  "readings": [
+    {
+      "id": "legacy-3a1dc5bfe2d5f802b64198f8",
+      "observedAt": "2026-07-21T16:00:00.000Z",
+      "remainingKwh": 101.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "date"
+    },
+    {
+      "id": "legacy-cad4de6a528d610c892215c2",
+      "observedAt": "2026-07-22T16:00:00.000Z",
+      "remainingKwh": 98.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "date"
+    },
+    {
+      "id": "legacy-7747ae52c99bf1dc5542df37",
+      "observedAt": "2026-07-23T08:27:00.000Z",
+      "remainingKwh": 96.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-2007a18d0a03e895375f3fdc",
+      "observedAt": "2026-07-23T08:42:00.000Z",
+      "remainingKwh": 95.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-5e6e788e886e5b195f49a4eb",
+      "observedAt": "2026-07-23T12:00:00.000Z",
+      "remainingKwh": 94.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-81c1ea133b08e0aaaaabb586",
+      "observedAt": "2026-07-23T15:21:00.000Z",
+      "remainingKwh": 92.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-e1ea499afe03b24b856c5c51",
+      "observedAt": "2026-07-23T17:43:00.000Z",
+      "remainingKwh": 92.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-809f8e4ebfb80637d5f631a8",
+      "observedAt": "2026-07-23T20:18:00.000Z",
+      "remainingKwh": 91.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-2484830b3157e63f730a0e0e",
+      "observedAt": "2026-07-23T23:09:00.000Z",
+      "remainingKwh": 91.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-81503665c74fbebb6d28045e",
+      "observedAt": "2026-07-24T04:28:00.000Z",
+      "remainingKwh": 90.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-b16e23821995eb5ff3d6b79e",
+      "observedAt": "2026-07-24T09:30:00.000Z",
+      "remainingKwh": 88.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-177d374540c8f3a54ca4c8d2",
+      "observedAt": "2026-07-24T11:54:00.000Z",
+      "remainingKwh": 88.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-8939985761b53184d8a90ba7",
+      "observedAt": "2026-07-24T15:04:00.000Z",
+      "remainingKwh": 87.8,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-797f7991c0c8dbfd84696a07",
+      "observedAt": "2026-07-24T17:48:00.000Z",
+      "remainingKwh": 86.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-45fb294018c1fb61cd99d392",
+      "observedAt": "2026-07-24T20:39:00.000Z",
+      "remainingKwh": 86.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-93f8ffb9a8830ac4a8708381",
+      "observedAt": "2026-07-24T23:14:00.000Z",
+      "remainingKwh": 86.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-adc7bbc29041b7dd40933a16",
+      "observedAt": "2026-07-25T04:24:00.000Z",
+      "remainingKwh": 84.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-39e833ddefbfb3da0ad8262e",
+      "observedAt": "2026-07-25T09:10:00.000Z",
+      "remainingKwh": 82.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-433b5bca21034264b00bdb92",
+      "observedAt": "2026-07-25T11:30:00.000Z",
+      "remainingKwh": 81.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-e129bb11b1c9a908624368bd",
+      "observedAt": "2026-07-25T14:41:00.000Z",
+      "remainingKwh": 80.7,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-c55af45d5358a476e9ba6a7c",
+      "observedAt": "2026-07-25T17:12:00.000Z",
+      "remainingKwh": 79.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-bcc410fefee0295a1d279278",
+      "observedAt": "2026-07-25T20:14:00.000Z",
+      "remainingKwh": 79.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-eeba231805195994b19838a8",
+      "observedAt": "2026-07-25T23:08:00.000Z",
+      "remainingKwh": 78.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-a7917905ea433475e4deff34",
+      "observedAt": "2026-07-26T04:37:00.000Z",
+      "remainingKwh": 77.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-5ce91e5cc419e89e919e6015",
+      "observedAt": "2026-07-26T09:22:00.000Z",
+      "remainingKwh": 75.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-3c4e2d04a0ca35d680c73837",
+      "observedAt": "2026-07-26T11:35:00.000Z",
+      "remainingKwh": 74.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-12983268d66fbdb5628aa98f",
+      "observedAt": "2026-07-26T14:43:00.000Z",
+      "remainingKwh": 73.4,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-8e109edf4be78206e98becd5",
+      "observedAt": "2026-07-26T17:13:00.000Z",
+      "remainingKwh": 72.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-aeae6259b4a960e854c6f48c",
+      "observedAt": "2026-07-26T20:16:00.000Z",
+      "remainingKwh": 71.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-77cd6a6b183c9f7ea10981f4",
+      "observedAt": "2026-07-26T23:09:00.000Z",
+      "remainingKwh": 71.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-f8670686d6153d7d5cb3532f",
+      "observedAt": "2026-07-27T04:49:00.000Z",
+      "remainingKwh": 70.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-e4f36b9225ba32d7d31e04f1",
+      "observedAt": "2026-07-27T10:50:00.000Z",
+      "remainingKwh": 68.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-0dd86a82a5a0425734c699a1",
+      "observedAt": "2026-07-27T15:49:00.000Z",
+      "remainingKwh": 66.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-d6023f8b8d9815dcae727c58",
+      "observedAt": "2026-07-27T17:53:00.000Z",
+      "remainingKwh": 66.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-5406ead56cff688a1a5ac690",
+      "observedAt": "2026-07-27T20:41:00.000Z",
+      "remainingKwh": 65.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-95b9cebd983cdaeb47c285a0",
+      "observedAt": "2026-07-27T23:18:00.000Z",
+      "remainingKwh": 65.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-f6344dab64cef54d80f4d1f4",
+      "observedAt": "2026-07-28T04:23:00.000Z",
+      "remainingKwh": 64.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-ab2600e20bef0984a5da7cf0",
+      "observedAt": "2026-07-28T09:44:00.000Z",
+      "remainingKwh": 62.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-0d637b2c6498fb5963ea8974",
+      "observedAt": "2026-07-28T12:09:00.000Z",
+      "remainingKwh": 61.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-c4703f1f0c9899112f75c2f8",
+      "observedAt": "2026-07-28T15:30:00.000Z",
+      "remainingKwh": 60.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-8bd31b9bacf290f57c610ef1",
+      "observedAt": "2026-07-28T17:44:00.000Z",
+      "remainingKwh": 59.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-e1139cec264a2f6448179ecd",
+      "observedAt": "2026-07-28T20:23:00.000Z",
+      "remainingKwh": 59.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-d2e34039bb8c1cf6b60d9db9",
+      "observedAt": "2026-07-28T23:13:00.000Z",
+      "remainingKwh": 58.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-15c027512ee380e4f3a33ab3",
+      "observedAt": "2026-07-29T04:27:00.000Z",
+      "remainingKwh": 57.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-826cc2c2ba734d7b36a50a9f",
+      "observedAt": "2026-07-29T16:58:00.000Z",
+      "remainingKwh": 52.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-9c5a2b8117404bf41c1275f6",
+      "observedAt": "2026-07-30T04:19:00.000Z",
+      "remainingKwh": 49.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-9ba3341d766e2422cadce14d",
+      "observedAt": "2026-07-30T17:08:00.000Z",
+      "remainingKwh": 43.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-405867595d95b04e6f827c4e",
+      "observedAt": "2026-07-31T04:38:00.000Z",
+      "remainingKwh": 41.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-1dbd9e0e0298f3ad070f6be2",
+      "observedAt": "2026-07-31T17:11:00.000Z",
+      "remainingKwh": 38.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-9034ca7bb010a803b50a5e5e",
+      "observedAt": "2026-08-01T04:34:00.000Z",
+      "remainingKwh": 35.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-15a9cadc0f8d039197276422",
+      "observedAt": "2026-08-01T16:37:00.000Z",
+      "remainingKwh": 30.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-32c09802667c4c2183952ec7",
+      "observedAt": "2026-08-02T04:36:00.000Z",
+      "remainingKwh": 26.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-677595422f8337a63f65a6ac",
+      "observedAt": "2026-08-02T16:37:00.000Z",
+      "remainingKwh": 26.7,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-7362cc0942fc42be17b5af68",
+      "observedAt": "2026-08-03T04:45:00.000Z",
+      "remainingKwh": 26.7,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-267791a10dfee0fa5e26c866",
+      "observedAt": "2026-08-03T17:28:00.000Z",
+      "remainingKwh": 26.6,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-84670c17bf3e2e989934078b",
+      "observedAt": "2026-08-04T04:29:00.000Z",
+      "remainingKwh": 26.6,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-a20eab6bd01708a7b4b19d40",
+      "observedAt": "2026-08-04T17:21:00.000Z",
+      "remainingKwh": 26.5,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-89f1b6f6901721fa5ebd69da",
+      "observedAt": "2026-08-05T04:28:00.000Z",
+      "remainingKwh": 26.5,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-ad95f693868b189eb7052534",
+      "observedAt": "2026-08-05T17:10:00.000Z",
+      "remainingKwh": 26.5,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-7b384af88b2f9b219b384f42",
+      "observedAt": "2026-08-06T04:29:00.000Z",
+      "remainingKwh": 26.5,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-255541ae4b92b4bce095f250",
+      "observedAt": "2026-08-07T04:03:00.000Z",
+      "remainingKwh": 26.4,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-fb0231926c8b9531dcf0ecef",
+      "observedAt": "2026-08-07T16:34:00.000Z",
+      "remainingKwh": 26.3,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-021aa2dc71f09b4764f63dfb",
+      "observedAt": "2026-08-08T03:00:00.000Z",
+      "remainingKwh": 26.3,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-32963812684c4bee9471fa76",
+      "observedAt": "2026-08-08T16:03:00.000Z",
+      "remainingKwh": 26.3,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-a5482f3d85b2ba77fbe8d050",
+      "observedAt": "2026-08-09T03:08:00.000Z",
+      "remainingKwh": 26.3,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-6df2d8c8558733001d4d40b0",
+      "observedAt": "2026-08-09T16:04:00.000Z",
+      "remainingKwh": 26.2,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-7e2d07ca1045619cb143888e",
+      "observedAt": "2026-08-10T03:18:00.000Z",
+      "remainingKwh": 26.2,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-142de4b8c200ee149ba244b6",
+      "observedAt": "2026-08-10T16:33:00.000Z",
+      "remainingKwh": 26.1,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-4ef345a39556f1537e4f1386",
+      "observedAt": "2026-08-11T03:10:00.000Z",
+      "remainingKwh": 26.1,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-107c4e53389388f9464e6b1f",
+      "observedAt": "2026-08-11T16:36:00.000Z",
+      "remainingKwh": 24.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-1238678cb02ae31413bcd872",
+      "observedAt": "2026-08-12T03:28:00.000Z",
+      "remainingKwh": 23.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-78825ab875c56798152dda2d",
+      "observedAt": "2026-08-12T16:36:00.000Z",
+      "remainingKwh": 21.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-4a1d0478460acc62bdcd7420",
+      "observedAt": "2026-08-13T03:33:00.000Z",
+      "remainingKwh": 21.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-5c11ab5ef741827e54667b73",
+      "observedAt": "2026-08-13T16:35:00.000Z",
+      "remainingKwh": 19.6,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-d2ac3e92bd1628c8d530f189",
+      "observedAt": "2026-08-14T03:29:00.000Z",
+      "remainingKwh": 18.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-a94138570ba330bae296422a",
+      "observedAt": "2026-08-14T16:32:00.000Z",
+      "remainingKwh": 17.2,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-5a2cc544cd5f1f647e6dbcff",
+      "observedAt": "2026-08-15T02:18:00.000Z",
+      "remainingKwh": 16.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-00f5efff268c4db647d2a83f",
+      "observedAt": "2026-08-15T15:57:00.000Z",
+      "remainingKwh": 16.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-7d35abbfeac581b048a54447",
+      "observedAt": "2026-08-16T02:34:00.000Z",
+      "remainingKwh": 16.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-d0a90dab6ac380382dbc82da",
+      "observedAt": "2026-08-16T15:57:00.000Z",
+      "remainingKwh": 16.5,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-666888dbdfeaabcd2d29dbe3",
+      "observedAt": "2026-08-17T02:33:00.000Z",
+      "remainingKwh": 15.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-6d4d349f17516d2399a2ccf1",
+      "observedAt": "2026-08-17T15:59:00.000Z",
+      "remainingKwh": 12.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-72eecc0f74e5a87f3fed2068",
+      "observedAt": "2026-08-18T02:20:00.000Z",
+      "remainingKwh": 12.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-b66559dcd0fe0f00c75d50e6",
+      "observedAt": "2026-08-18T16:02:00.000Z",
+      "remainingKwh": 9.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-214c696910d8e5bf2c3c9efa",
+      "observedAt": "2026-08-19T02:31:00.000Z",
+      "remainingKwh": 8.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-fde0b9e0ef78f09257e48c0b",
+      "observedAt": "2026-08-19T16:03:00.000Z",
+      "remainingKwh": 7.7,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-c1b8d68a588387a754395146",
+      "observedAt": "2026-08-20T02:30:00.000Z",
+      "remainingKwh": 5.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-48d917ebe7e164c5541c1e39",
+      "observedAt": "2026-08-20T16:04:00.000Z",
+      "remainingKwh": 3.6,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-3acaee9dce66b807e0dc7e56",
+      "observedAt": "2026-08-21T02:36:00.000Z",
+      "remainingKwh": 1.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-3eea344b7451bf43b19cdb0e",
+      "observedAt": "2026-08-21T16:04:00.000Z",
+      "remainingKwh": 0.4,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-0220b10227e6da541eb5c2b4",
+      "observedAt": "2026-08-22T02:20:00.000Z",
+      "remainingKwh": 0.4,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-10d847803e817e5482314f00",
+      "observedAt": "2026-08-22T15:57:00.000Z",
+      "remainingKwh": 47.6,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-450a9b835165dae04d5df6b4",
+      "observedAt": "2026-08-23T02:37:00.000Z",
+      "remainingKwh": 47.6,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-45b03ff5f0e64527294ae3e3",
+      "observedAt": "2026-08-23T15:57:00.000Z",
+      "remainingKwh": 46.4,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-8ca3c608f075926fe0e04f4a",
+      "observedAt": "2026-08-24T02:37:00.000Z",
+      "remainingKwh": 45.6,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-f4bbb0358e8c89fe9a8c7542",
+      "observedAt": "2026-08-24T16:15:00.000Z",
+      "remainingKwh": 43.3,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-2b6b2bf26b0e17f8a8875283",
+      "observedAt": "2026-08-25T02:30:00.000Z",
+      "remainingKwh": 42.6,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-b279fd7d90478e182796e13a",
+      "observedAt": "2026-08-25T16:18:00.000Z",
+      "remainingKwh": 39.6,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-a47b95c8468bf8aa379baaa6",
+      "observedAt": "2026-08-26T02:38:00.000Z",
+      "remainingKwh": 38.6,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-361967fbc440c3996c8790bc",
+      "observedAt": "2026-08-26T16:38:00.000Z",
+      "remainingKwh": 36.6,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-ab1e072f6f1804fc94bd125e",
+      "observedAt": "2026-08-27T11:10:00.000Z",
+      "remainingKwh": 33.6,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-66a11d1e1bea7f8402a342a7",
+      "observedAt": "2026-08-28T00:36:00.000Z",
+      "remainingKwh": 30.6,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-f14093b24780882099671aa6",
+      "observedAt": "2026-08-28T12:45:00.000Z",
+      "remainingKwh": 27.6,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-9bda7c9c6a68061d62d7027a",
+      "observedAt": "2026-08-29T00:07:00.000Z",
+      "remainingKwh": 23.6,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-e2f82cca5f3644a684d011f2",
+      "observedAt": "2026-08-29T07:51:00.000Z",
+      "remainingKwh": 21.6,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-22f1dbeb6123d2f81bc6ad6b",
+      "observedAt": "2026-08-29T18:52:00.000Z",
+      "remainingKwh": 19.6,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-7c0939e92b8b48a647d7e180",
+      "observedAt": "2026-08-30T06:37:00.000Z",
+      "remainingKwh": 16.6,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-72c3520f11108be9a144ace9",
+      "observedAt": "2026-08-30T18:48:00.000Z",
+      "remainingKwh": 13.6,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-9758e097aad5493cb6af0cc9",
+      "observedAt": "2026-08-31T07:01:00.000Z",
+      "remainingKwh": 8.6,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-aeee749118010d618f61fa57",
+      "observedAt": "2026-08-31T21:05:00.000Z",
+      "remainingKwh": 2.6,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-356740689837261385bcc5c8",
+      "observedAt": "2026-09-01T06:14:00.000Z",
+      "remainingKwh": 0.6,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-a1cae220f417b11f6f0fd0dd",
+      "observedAt": "2026-09-01T18:51:00.000Z",
+      "remainingKwh": 52.5,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-013ffbd7dd4c697d1c160e79",
+      "observedAt": "2026-09-02T05:48:00.000Z",
+      "remainingKwh": 49.5,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-ecc898e61acd7607f36741ab",
+      "observedAt": "2026-09-02T18:57:00.000Z",
+      "remainingKwh": 45.5,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-c45c3389b8b7a38d7703ef4e",
+      "observedAt": "2026-09-03T05:46:00.000Z",
+      "remainingKwh": 43.5,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-32fefd5e0e92b95295858ec9",
+      "observedAt": "2026-09-03T18:52:00.000Z",
+      "remainingKwh": 39.5,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-9aa1508b0d61eb8fadaa6228",
+      "observedAt": "2026-09-04T05:52:00.000Z",
+      "remainingKwh": 37.5,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-32385adeed9beaa9a8d09d32",
+      "observedAt": "2026-09-04T18:33:00.000Z",
+      "remainingKwh": 34.5,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-6060612b91f8fa5bfbf8727f",
+      "observedAt": "2026-09-05T05:44:00.000Z",
+      "remainingKwh": 32.5,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-c04a441987907d9949017cd1",
+      "observedAt": "2026-09-05T17:39:00.000Z",
+      "remainingKwh": 29.5,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-ed6c14cc9547259eb385985c",
+      "observedAt": "2026-09-06T05:56:00.000Z",
+      "remainingKwh": 27.5,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-9eda78789f40f98f83aeff5f",
+      "observedAt": "2026-09-06T17:43:00.000Z",
+      "remainingKwh": 86.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-46acea006677b66352e0f9fa",
+      "observedAt": "2026-09-07T06:05:00.000Z",
+      "remainingKwh": 85.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-fe7f0bf18ec0a5f5006ab401",
+      "observedAt": "2026-09-07T19:23:00.000Z",
+      "remainingKwh": 80.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-ca11df82bbd60aaa5fce1917",
+      "observedAt": "2026-09-08T05:57:00.000Z",
+      "remainingKwh": 78.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-7235c2cc291713757c82a108",
+      "observedAt": "2026-09-08T18:58:00.000Z",
+      "remainingKwh": 74.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-bd4095d345a527adacfd4697",
+      "observedAt": "2026-09-09T05:58:00.000Z",
+      "remainingKwh": 72.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-a5e1fc5745f14d0da148b99c",
+      "observedAt": "2026-09-09T18:51:00.000Z",
+      "remainingKwh": 69.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-ea455d975360b2a03a99bbc5",
+      "observedAt": "2026-09-10T05:57:00.000Z",
+      "remainingKwh": 67.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-21aee5a38b3021eae27be113",
+      "observedAt": "2026-09-10T18:40:00.000Z",
+      "remainingKwh": 63.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-be99342f57e5985bf5155101",
+      "observedAt": "2026-09-11T05:57:00.000Z",
+      "remainingKwh": 62.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-c47b042f0a7617b569b67a5e",
+      "observedAt": "2026-09-11T18:44:00.000Z",
+      "remainingKwh": 58.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-164a665c6938b2b7746a2546",
+      "observedAt": "2026-09-12T05:45:00.000Z",
+      "remainingKwh": 56.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-02cce195187546b1aa6c888b",
+      "observedAt": "2026-09-12T17:50:00.000Z",
+      "remainingKwh": 53.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-22eda4ad6aaa3b237fa8e7ca",
+      "observedAt": "2026-09-13T18:20:00.000Z",
+      "remainingKwh": 47.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-91bd6c53be5418c56ef028b4",
+      "observedAt": "2026-09-14T06:15:00.000Z",
+      "remainingKwh": 45.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-27d2bdd7088dc9104e61d95d",
+      "observedAt": "2026-09-14T19:56:00.000Z",
+      "remainingKwh": 42.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-9d34a03cf1e710b25131c76d",
+      "observedAt": "2026-09-15T06:09:00.000Z",
+      "remainingKwh": 40.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-e952411839010ed0d872fd62",
+      "observedAt": "2026-09-15T19:13:00.000Z",
+      "remainingKwh": 36.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-16f78e75280188debc30b6ee",
+      "observedAt": "2026-09-16T05:59:00.000Z",
+      "remainingKwh": 34.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-3577f146c4f4128d8c1c98a7",
+      "observedAt": "2026-09-16T19:05:00.000Z",
+      "remainingKwh": 30.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-99fd895dbe7d3908a8fadd8d",
+      "observedAt": "2026-09-17T06:08:00.000Z",
+      "remainingKwh": 28.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-4bd1c4c7292c2301fdd11a5c",
+      "observedAt": "2026-09-17T19:16:00.000Z",
+      "remainingKwh": 24.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-3d739d0c55f51c040025f570",
+      "observedAt": "2026-09-18T05:54:00.000Z",
+      "remainingKwh": 24.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-08bc3121a10f5e4fecb88ad0",
+      "observedAt": "2026-09-18T18:38:00.000Z",
+      "remainingKwh": 21.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-a03dbdf70667287928d239f5",
+      "observedAt": "2026-09-19T05:52:00.000Z",
+      "remainingKwh": 21.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-7c10662370496579d6f46cf0",
+      "observedAt": "2026-09-19T18:12:00.000Z",
+      "remainingKwh": 18.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-bb8f801e89bf4b36242d780d",
+      "observedAt": "2026-09-20T06:13:00.000Z",
+      "remainingKwh": 17.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-846ef2b2346720bd64ed314f",
+      "observedAt": "2026-09-20T18:18:00.000Z",
+      "remainingKwh": 14.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-841aa2670796e2fe8e06a99f",
+      "observedAt": "2026-09-21T06:19:00.000Z",
+      "remainingKwh": 12.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-3321764dc6509f72018a1d06",
+      "observedAt": "2026-09-21T20:07:00.000Z",
+      "remainingKwh": 8.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-3d8eae860797fa22a0b7c5fc",
+      "observedAt": "2026-09-22T06:12:00.000Z",
+      "remainingKwh": 7.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-ffb8cb9f58475fe5768a576f",
+      "observedAt": "2026-09-22T19:11:00.000Z",
+      "remainingKwh": 3.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-aa171ea2b6123677a10a81aa",
+      "observedAt": "2026-09-23T05:58:00.000Z",
+      "remainingKwh": 1.9,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-20f3da7505ea7bd526ef5b0b",
+      "observedAt": "2026-09-23T19:14:00.000Z",
+      "remainingKwh": 79.4,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-95f17dc39fe046997756447e",
+      "observedAt": "2026-09-24T06:09:00.000Z",
+      "remainingKwh": 78.4,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-1b155344d7fd41531c12d822",
+      "observedAt": "2026-09-24T19:30:00.000Z",
+      "remainingKwh": 75.4,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-0b8fb170ebfb26349b1582d2",
+      "observedAt": "2026-09-25T06:09:00.000Z",
+      "remainingKwh": 74.4,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-51b3ab384eda66392c6af542",
+      "observedAt": "2026-09-25T19:34:00.000Z",
+      "remainingKwh": 71.4,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-029b7b0d504136e3a0cb5e4f",
+      "observedAt": "2026-09-26T06:09:00.000Z",
+      "remainingKwh": 69.4,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-bccd259d97c35bf4edac35ec",
+      "observedAt": "2026-09-26T18:43:00.000Z",
+      "remainingKwh": 66.4,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-37cf48e6c7bb35a7cb54df43",
+      "observedAt": "2026-09-27T06:35:00.000Z",
+      "remainingKwh": 64.4,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-632f90f1ae7597636102eef6",
+      "observedAt": "2026-09-27T19:17:00.000Z",
+      "remainingKwh": 60.4,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-e00a3d72c5b633f1feff482e",
+      "observedAt": "2026-09-28T06:51:00.000Z",
+      "remainingKwh": 59.4,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-4f194233dab66f579aa91b59",
+      "observedAt": "2026-09-28T21:23:00.000Z",
+      "remainingKwh": 55.4,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-a1927ec531cf3451c693d2f2",
+      "observedAt": "2026-09-29T06:53:00.000Z",
+      "remainingKwh": 53.4,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-b7c0b8090ad5f390c22a7b85",
+      "observedAt": "2026-09-29T20:14:00.000Z",
+      "remainingKwh": 50.4,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-003f84b69646f817e5d10da8",
+      "observedAt": "2026-09-30T06:41:00.000Z",
+      "remainingKwh": 49.4,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-121051e4c8a66aa50e384af7",
+      "observedAt": "2026-09-30T20:18:00.000Z",
+      "remainingKwh": 47.4,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-5921a0bb66eebed4c6cf729e",
+      "observedAt": "2026-10-01T07:10:00.000Z",
+      "remainingKwh": 46.4,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-92fd752bc8aa350b1661a65b",
+      "observedAt": "2026-10-01T20:31:00.000Z",
+      "remainingKwh": 44.4,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-8a5b5e69542a7bd157de0e25",
+      "observedAt": "2026-10-02T06:59:00.000Z",
+      "remainingKwh": 43.4,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-54665bdce72c87c716647c1b",
+      "observedAt": "2026-10-02T20:07:00.000Z",
+      "remainingKwh": 41.3,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-57c4fd9a5ab2f86fd3fdd5df",
+      "observedAt": "2026-10-03T06:30:00.000Z",
+      "remainingKwh": 41.3,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-42eead1f445575c85c4e70fa",
+      "observedAt": "2026-10-03T18:49:00.000Z",
+      "remainingKwh": 39.4,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-024192048677498a41aa9f4c",
+      "observedAt": "2026-10-04T06:49:00.000Z",
+      "remainingKwh": 38.4,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-5ab8c4c38102df6625c684e3",
+      "observedAt": "2026-10-05T07:01:00.000Z",
+      "remainingKwh": 37.2,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-cc8330da72a174e3df481ec7",
+      "observedAt": "2026-10-05T22:11:00.000Z",
+      "remainingKwh": 35.2,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-1b8f2bf26be8b4819dc0b85b",
+      "observedAt": "2026-10-06T07:32:00.000Z",
+      "remainingKwh": 34.4,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-2fae4e55076872fe642d9d02",
+      "observedAt": "2026-10-06T20:34:00.000Z",
+      "remainingKwh": 33.4,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-6279002fe0cc70281978d1f7",
+      "observedAt": "2026-10-07T07:12:00.000Z",
+      "remainingKwh": 33.4,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-8d3849c9ced0703788686e01",
+      "observedAt": "2026-10-07T20:47:00.000Z",
+      "remainingKwh": 31.4,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-01dd2214db34c59cdac58a23",
+      "observedAt": "2026-10-08T07:22:00.000Z",
+      "remainingKwh": 30.4,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-94b21d879cd33b1555c7f306",
+      "observedAt": "2026-10-08T20:49:00.000Z",
+      "remainingKwh": 27.4,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-6882e0358f7fb7b0a73c9be0",
+      "observedAt": "2026-10-09T07:22:00.000Z",
+      "remainingKwh": 25.4,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-3b27a99c7cfda38b045ce27c",
+      "observedAt": "2026-10-09T20:20:00.000Z",
+      "remainingKwh": 22.4,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-0e23a02517f5849b74a4534e",
+      "observedAt": "2026-10-10T07:04:00.000Z",
+      "remainingKwh": 21.4,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-dba3d4897d02c43c5550b004",
+      "observedAt": "2026-10-10T19:32:00.000Z",
+      "remainingKwh": 18.4,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-d27d5cf1d446bcf6711e3eb3",
+      "observedAt": "2026-10-11T07:10:00.000Z",
+      "remainingKwh": 16.4,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-1c40aed253b7322b5a1a95f4",
+      "observedAt": "2026-10-11T19:43:00.000Z",
+      "remainingKwh": 13.4,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-f1b65c38708659acae4b1407",
+      "observedAt": "2026-10-12T07:19:00.000Z",
+      "remainingKwh": 11.4,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-0add50e43813f0baa993edde",
+      "observedAt": "2026-10-12T22:36:00.000Z",
+      "remainingKwh": 9.4,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-ccb34d1c169e701f1b3aa057",
+      "observedAt": "2026-10-13T07:41:00.000Z",
+      "remainingKwh": 8.4,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-6c92fc5a39faa4fe7a39e10f",
+      "observedAt": "2026-10-13T20:49:00.000Z",
+      "remainingKwh": 4.4,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-cfa3108ad2f57c2315620d1a",
+      "observedAt": "2026-10-14T06:07:00.000Z",
+      "remainingKwh": 3.4,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "legacy-eb9d0f8568e975224eed1049",
+      "observedAt": "2026-10-14T19:41:00.000Z",
+      "remainingKwh": 2.2,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "legacy",
+      "precision": "minute"
+    },
+    {
+      "id": "manual-probe-2026-10-15T12:05:29.320Z",
+      "observedAt": "2026-10-15T12:05:29.320Z",
+      "remainingKwh": 1.4,
+      "scheduledFor": null,
+      "logicalDay": null,
+      "slot": "historical",
+      "source": "manual",
+      "precision": "second"
+    }
+  ],
+  "attempts": []
+}
