@@ -3,11 +3,53 @@ const SVG_NS = 'http://www.w3.org/2000/svg';
 const statusNames = { complete: '整日实测', estimated: '整日估算', partial: '今日暂计', missing: '缺测', recharge: '充值待核算' };
 const slotNames = { success: '正常', late: '延迟查询', pending: '待查询', retrying: '正在重试', missing: '缺测', historical: '历史时段不详', no_time: '历史时刻不详' };
 const CACHE_KEY = 'ecust215-snapshot-v2';
+const RAW_SNAPSHOT_URL = 'https://raw.githubusercontent.com/jinglingmu926-ui/ecust-electricity-statistics/main/snapshot.json';
 let snapshot = null;
 let analytics = null;
 let selectedRange = null;
 let lastDashboard = null;
 let loading = false;
+
+function validSnapshot(value) {
+  return Boolean(value && value.schemaVersion === 2 && Array.isArray(value.readings));
+}
+function snapshotRank(value) {
+  let latest = -Infinity;
+  for (const reading of value.readings) {
+    const observed = Date.parse(reading.observedAt);
+    if (Number.isFinite(observed)) latest = Math.max(latest, observed);
+  }
+  const generated = Date.parse(value.generatedAt);
+  return [latest, Number.isFinite(generated) ? generated : -Infinity];
+}
+async function fetchSnapshot(url) {
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 6000);
+  try {
+    const response = await fetch(url, { cache: 'no-store', signal: controller.signal });
+    if (!response.ok) throw new Error(`记录文件读取失败（HTTP ${response.status}）`);
+    const value = await response.json();
+    if (!validSnapshot(value)) throw new Error('记录文件格式异常，未覆盖此前已显示的数据');
+    return value;
+  } finally {
+    clearTimeout(timeout);
+  }
+}
+async function readLatestSnapshot() {
+  // Pages may still serve an old build after the worker commits a fresh snapshot.
+  // Local previews and the Worker keep their own authoritative data source.
+  const urls = location.hostname.endsWith('.github.io')
+    ? [`${RAW_SNAPSHOT_URL}?t=${Date.now()}`, './snapshot.json']
+    : ['./snapshot.json'];
+  const results = await Promise.allSettled(urls.map(fetchSnapshot));
+  const candidates = results.filter(result => result.status === 'fulfilled').map(result => result.value);
+  if (!candidates.length) throw new Error('暂时无法连接有效的记录文件');
+  candidates.sort((a, b) => {
+    const ar = snapshotRank(a), br = snapshotRank(b);
+    return br[0] !== ar[0] ? (br[0] > ar[0] ? 1 : -1) : br[1] !== ar[1] ? (br[1] > ar[1] ? 1 : -1) : 0;
+  });
+  return candidates[0];
+}
 
 function element(tag, className, text) {
   const node = document.createElement(tag);
@@ -234,10 +276,7 @@ async function loadData() {
   $('refresh').textContent = '读取中…';
   try {
     if (!analytics) analytics = await import('./analytics.mjs');
-    const response = await fetch('./snapshot.json', { cache: 'no-store' });
-    if (!response.ok) throw new Error(`记录文件读取失败（HTTP ${response.status}）`);
-    const next = await response.json();
-    if (!next || next.schemaVersion !== 2 || !Array.isArray(next.readings)) throw new Error('记录文件格式异常，未覆盖此前已显示的数据');
+    const next = await readLatestSnapshot();
     snapshot = next;
     try { localStorage.setItem(CACHE_KEY, JSON.stringify(next)); } catch { /* Storage may be disabled; in-memory results still work. */ }
     if (!$('start-date').value) setInputs(defaultRange());
@@ -247,7 +286,7 @@ async function loadData() {
     if (!snapshot && analytics) {
       try {
         const saved = JSON.parse(localStorage.getItem(CACHE_KEY) || 'null');
-        if (saved?.schemaVersion === 2 && Array.isArray(saved.readings)) {
+        if (validSnapshot(saved)) {
           snapshot = saved;
           if (!$('start-date').value) setInputs(defaultRange());
           render();
